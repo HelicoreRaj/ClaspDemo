@@ -4,8 +4,8 @@ on:
       - master
 name: 🚀 Deploy website on push
 jobs:
-  default:
-    before_script:
+  web-deploy:
+    steps:
       - clasp push
       - clasp deploy
 
