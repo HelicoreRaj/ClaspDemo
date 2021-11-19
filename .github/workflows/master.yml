@@ -97,6 +97,6 @@ jobs:
       - name: Deploy Script
         id: clasp-deploy
         # if: ${{env.DEPLOYMENT_ID && (github.event_name == 'release' || (github.event_name == 'push' && github.ref == 'refs/heads/main'))}}
-        run: clasp deploy -i "$DEPLOYMENT_ID" -d "abcd"
+        run: clasp deploy -i "$DEPLOYMENT_ID"
         env:
           DEPLOYMENT_ID: ${{ secrets.DEPLOYMENT_ID }}
