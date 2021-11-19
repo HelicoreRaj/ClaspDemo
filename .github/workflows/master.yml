@@ -3,9 +3,10 @@ on:
     branches:
       - master
 name: 🚀 Deploy website on push
-
-before_script:
-    - clasp push
-    - clasp deploy
+jobs:
+  default:
+    before_script:
+      - clasp push
+      - clasp deploy
 
   
