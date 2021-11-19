@@ -18,7 +18,14 @@ jobs:
       - name: Install Clasp
         run: npm install -g @google/clasp
 
-      - name: Push Data
-        run: clasp push
+      - name: Install jq
+        run: |-
+          sudo apt update -y
+          sudo apt install jq -y
 
+      - name: Setup Logins
+        run: bash setup.sh
+
+      - name: Clone Scripts
+        run: bash push.sh
   
