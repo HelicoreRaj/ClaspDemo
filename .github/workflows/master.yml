@@ -4,9 +4,7 @@ on:
       - master
 name: 🚀 Deploy website on push
 jobs:
-  web-deploy:
-    steps:
-      - clasp push
-      - clasp deploy
+  - run: clasp push
+  - run: clasp deploy
 
   
