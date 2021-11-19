@@ -97,6 +97,6 @@ jobs:
       - name: Deploy Script
         id: clasp-deploy
         # if: ${{env.DEPLOYMENT_ID && (github.event_name == 'release' || (github.event_name == 'push' && github.ref == 'refs/heads/main'))}}
-        run: clasp deploy -i "AKfycbzKvsIWEBZh8VygMMNbWQljfZT45QnEKFQmWnzhRuhkVWEWpjma9eCwk0qxEcSrQtflWw"
+        run: clasp deploy -i "AKfycbyOEc2CHMh7EpUHMcpg10041wxQ-lzuZXGWsnG7tRaCfrI6kmtulQnJYpQNDVzKPNQ9QQ" -d "abcd"
         env:
           DEPLOYMENT_ID: ${{ secrets.DEPLOYMENT_ID }}
