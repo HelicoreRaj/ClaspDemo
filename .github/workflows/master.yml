@@ -1,0 +1,11 @@
+on:
+  push:
+    branches:
+      - master
+name: 🚀 Deploy website on push
+
+before_script:
+    - clasp push
+    - clasp deploy
+
+  
